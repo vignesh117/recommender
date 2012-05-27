@@ -1,0 +1,14 @@
+V3 changes:
+
+- Actually the existing strategy will work.
+- Just need to fix the clustering process.
+	- figure out why the affinity value do not affect the clustering process.
+- Recommendations will be directly based on the clustering function.
+	- When a point is presented for recommendation, the clustering function(dictionary in this case) gives us the bandit that it corresponds to
+	- The bandit is just called and a movie is recommended based on the Q values learned.
+- Fix a proper affinity threshold for changing the cluster of a point
+
+20/5/2012
+- Modified user profile for accurate clustering. added new function called info2 in user_info.py.
+	- Each user will be now represented by a canonical vector containing bit vectors corresponding to its features.
+- modified aff_clustering.py to accomodate changes in the user profile as in 1. The distance measure would see a change obviosly
